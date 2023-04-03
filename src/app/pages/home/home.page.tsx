@@ -1,7 +1,12 @@
 import React from "react";
 import logoPoli from "../../../assets/LogoEPUSP.png";
 import { CardsContainer, Container } from "./home-styles";
-import { faBuilding } from "@fortawesome/free-regular-svg-icons";
+import {
+  faBuilding,
+  faFaceLaugh,
+  faListAlt,
+  faFileLines,
+} from "@fortawesome/free-regular-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { CardItem } from "../../../components/card-item";
 import { Typography, Space, ConfigProvider } from "antd";
@@ -28,23 +33,18 @@ export const HomePage = () => {
           </Text>
           <CardsContainer>
             <CardItem
-              icon={faBuilding}
-              title="Exemplo"
+              icon={faFaceLaugh}
+              title="Perfil"
               onClick={() => navigate("")}
             />
             <CardItem
-              icon={faBuilding}
-              title="Exemplo"
+              icon={faListAlt}
+              title="Vagas"
               onClick={() => navigate("")}
             />
             <CardItem
-              icon={faBuilding}
-              title="Exemplo"
-              onClick={() => navigate("")}
-            />
-            <CardItem
-              icon={faBuilding}
-              title="Exemplo"
+              icon={faFileLines}
+              title="Currículo"
               onClick={() => navigate("")}
             />
           </CardsContainer>

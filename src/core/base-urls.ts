@@ -1,1 +1,2 @@
-export const BASE_URL = "";
+export const STUDENTS_BASE_URL =
+  "https://students-run-service-mgz5b2qjuq-rj.a.run.app/";
