@@ -18,6 +18,7 @@ interface IForm {
   phone: string;
   address: string;
   quater: string;
+  password: string;
 }
 
 const SKILLS_OPTIONS = [
@@ -59,6 +60,7 @@ export const SignUpPage = () => {
       phone,
       quater,
       skills,
+      password,
     } = values;
 
     await axios.post(`${STUDENTS_BASE_URL}students`, {
@@ -70,6 +72,7 @@ export const SignUpPage = () => {
       phone,
       skills,
       address,
+      password,
     });
 
     navigate(AppPath.home);
@@ -144,6 +147,16 @@ export const SignUpPage = () => {
             </Form.Item>
             <Form.Item name="phone" label="Telefone" style={{ width: "100%" }}>
               <Input placeholder="Digite seu número de telefone" />
+            </Form.Item>
+            <Form.Item
+              rules={[
+                { required: true, message: "Por favor, digite uma senha" },
+              ]}
+              name="password"
+              label="Senha"
+              style={{ width: "100%" }}
+            >
+              <Input.Password placeholder="Senha para acesso à plataforma" />
             </Form.Item>
 
             <Form.Item>

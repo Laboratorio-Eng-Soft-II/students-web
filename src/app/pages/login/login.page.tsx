@@ -3,6 +3,8 @@ import { Space, Button, Input, Form, Typography, Card } from "antd";
 import { CenterView } from "../../../components/center-view/center-view.styles";
 import { useNavigate } from "react-router-dom";
 import { AppPath } from "../../routes";
+import axios from "axios";
+import { AUTH_BASE_URL } from "../../../core/base-urls";
 
 const { Title, Text } = Typography;
 
@@ -16,7 +18,20 @@ export const LoginPage = () => {
 
   const navigate = useNavigate();
 
-  const onFinish = (values: IForm) => {
+  const onFinish = async (values: IForm) => {
+    const { email, password } = values;
+
+    try {
+      const result = await axios.post(`${AUTH_BASE_URL}get-token`, {
+        email,
+        password,
+      });
+      localStorage.setItem("user", JSON.stringify(result));
+      navigate(AppPath.home);
+    } catch (error) {
+      console.log(error);
+    }
+
     console.log(values);
   };
 
@@ -50,7 +65,9 @@ export const LoginPage = () => {
                 <Button htmlType="submit" type="primary">
                   Login
                 </Button>
-                <Button type="text" onClick={() => navigate(AppPath.signUp)}>Fazer cadastro</Button>
+                <Button type="text" onClick={() => navigate(AppPath.signUp)}>
+                  Fazer cadastro
+                </Button>
               </Space>
             </Form.Item>
           </Form>
