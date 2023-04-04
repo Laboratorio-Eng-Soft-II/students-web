@@ -1,6 +1,8 @@
 import React from "react";
 import { Space, Button, Input, Form, Typography, Card } from "antd";
 import { CenterView } from "../../../components/center-view/center-view.styles";
+import { useNavigate } from "react-router-dom";
+import { AppPath } from "../../routes";
 
 const { Title, Text } = Typography;
 
@@ -11,6 +13,8 @@ interface IForm {
 
 export const LoginPage = () => {
   const [form] = Form.useForm<IForm>();
+
+  const navigate = useNavigate();
 
   const onFinish = (values: IForm) => {
     console.log(values);
@@ -46,7 +50,7 @@ export const LoginPage = () => {
                 <Button htmlType="submit" type="primary">
                   Login
                 </Button>
-                <Button type="text">Fazer cadastro</Button>
+                <Button type="text" onClick={() => navigate(AppPath.signUp)}>Fazer cadastro</Button>
               </Space>
             </Form.Item>
           </Form>

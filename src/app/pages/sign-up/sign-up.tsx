@@ -88,7 +88,7 @@ export const SignUpPage = () => {
           </Text>
           <Form form={form} layout="vertical" onFinish={onFinish}>
             <Form.Item
-              label="Name"
+              label="Nome"
               name="name"
               rules={[
                 { required: true, message: "Por favor, digite seu nome" },
