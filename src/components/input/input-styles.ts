@@ -31,10 +31,6 @@ export const InputStyled = styled.input`
     transition: all 0.3s;
 `
 
-interface InputLabelProps {
-    color?: string
-}
-
 export const InputLabel = styled.label`
     color: ${props => props.color?? Colors.primary};
     font-size: ${FontSize.sm};

@@ -21,29 +21,6 @@ interface studentModel {
   current_quarter: string;
 }
 
-const SKILLS_OPTIONS = [
-  {
-    label: "Javascript",
-    value: "javascript",
-  },
-  {
-    label: "HTML",
-    value: "html",
-  },
-  {
-    label: "Inglês",
-    value: "english",
-  },
-  {
-    label: "Python",
-    value: "python",
-  },
-  {
-    label: "NodeJS",
-    value: "nodejs",
-  },
-];
-
 export const ProfilePage = () => {
   const navigate = useNavigate();
 
