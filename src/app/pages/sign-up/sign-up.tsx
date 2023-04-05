@@ -17,7 +17,7 @@ interface IForm {
   other_skills: string;
   phone: string;
   address: string;
-  quater: string;
+  quarter: string;
   password: string;
 }
 
@@ -58,7 +58,7 @@ export const SignUpPage = () => {
       engineering,
       other_skills,
       phone,
-      quater,
+      quarter,
       skills,
       password,
     } = values;
@@ -67,7 +67,7 @@ export const SignUpPage = () => {
       nusp,
       name,
       engineering,
-      current_quarter: parseInt(quater),
+      current_quarter: parseInt(quarter),
       usp_email: email,
       phone,
       skills,
