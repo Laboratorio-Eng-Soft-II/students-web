@@ -1,5 +1,4 @@
 import React from "react";
-import logoPoli from "../../../assets/LogoEPUSP.png";
 import { CardsContainer, Container } from "./home-styles";
 import {
   faFaceLaugh,
@@ -9,7 +8,6 @@ import {
 import { useNavigate } from "react-router-dom";
 import { Space, ConfigProvider } from "antd";
 import { AppPath } from "../../routes";
-import { Body, H1, Spacing } from "../../../theme";
 import { CardItem, Header, Separator } from "../../../components";
 
 export const HomePage = () => {

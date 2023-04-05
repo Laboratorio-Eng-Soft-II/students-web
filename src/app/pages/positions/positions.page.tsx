@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { POSITIONS_BASE_URL } from "../../../core";
 import { Container } from "../home/home-styles";
-import { H1, H3, LinkButton, Spacing } from "../../../theme";
+import { LinkButton, Spacing } from "../../../theme";
 import { AppPath } from "../../routes";
 import { Hbox, Header, Separator, TextCard } from "../../../components";
 
