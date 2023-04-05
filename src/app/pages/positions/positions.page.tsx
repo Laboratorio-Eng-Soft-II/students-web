@@ -6,9 +6,8 @@ import axios from 'axios'
 import { POSITIONS_BASE_URL } from '../../../core'
 import { Container } from '../home/home-styles'
 import { H1, H3, LinkButton, Spacing } from '../../../theme';
-import { Hbox, Separator } from '../../../components/box';
-import { TextCard } from '../../../components/text-card';
 import { AppPath } from '../../routes';
+import { Hbox, Separator, TextCard } from '../../../components';
 
 const MOCK_CNPJ = '123'
 

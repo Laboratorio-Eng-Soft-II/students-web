@@ -7,11 +7,10 @@ import {
   faFileLines,
 } from "@fortawesome/free-regular-svg-icons";
 import { useNavigate } from "react-router-dom";
-import { CardItem } from "../../../components/card-item";
 import { Space, ConfigProvider } from "antd";
 import { AppPath } from "../../routes";
 import { Body, H1, Spacing } from "../../../theme";
-import { Separator } from "../../../components/box";
+import { CardItem, Separator } from "../../../components";
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -34,7 +33,7 @@ export const HomePage = () => {
               Empresas e os Alunos transformam sonhos em realidades
           </Body>
           <Separator size={Spacing.XSmall}/>
-          
+
           <CardsContainer>
             <CardItem
               icon={faFaceLaugh}
