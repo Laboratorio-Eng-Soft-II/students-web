@@ -32,7 +32,7 @@ export const InputStyled = styled.input`
 `
 
 export const InputLabel = styled.label`
-    color: ${Colors.primary};
+    color: ${props => props.color?? Colors.primary};
     font-size: ${FontSize.sm};
     font-weight: ${FontWeight.SemiBold};
 `

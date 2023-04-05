@@ -86,8 +86,8 @@ export const SignUpPage = () => {
           message="Aluno cadastrado com sucesso"
           showIcon
           action={
-            <Button type="link" onClick={() => navigate(AppPath.home)}>
-              IR PARA HOME
+            <Button type="link" onClick={() => navigate(AppPath.login)}>
+              IR PARA LOGIN
             </Button>
           }
           afterClose={() => setShowFlash(false)}
@@ -131,7 +131,7 @@ export const SignUpPage = () => {
               ]}
             >
               <Input placeholder="Seu número USP" />
-            </Form.Item>
+            </Form.Item>  
 
             <Form.Item name="engineering" label="Curso">
               <Input placeholder="Digite seu curso" />
