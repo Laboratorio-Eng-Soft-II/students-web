@@ -6,13 +6,14 @@ import { Separator } from '../box'
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     label?: string
+    color?: string
 }
 
-export const Input: React.FC<InputProps> = ({ label, children, ...props }) => {
+export const Input: React.FC<InputProps> = ({ label, color, children, ...props }) => {
     return (
         <Row>
             <Col>
-                {!!label && <InputLabel>{label}</InputLabel>}
+                {!!label && <InputLabel color={color}>{label}</InputLabel>}
                 <Separator size={Spacing.XSmall} />
                 <InputStyled {...props} />
             </Col>

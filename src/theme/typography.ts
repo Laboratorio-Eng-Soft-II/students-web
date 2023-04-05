@@ -58,7 +58,7 @@ export const LinkButton = styled.button`
     justify-content: center;
     align-items: center;
     outline: none;
-    color: white;
+    color: ${props => props.color ?? 'white'};
     font-weight: bold;
     font-size: ${FontSize.md};
     padding: ${Spacing.Small} ${Spacing.Medium};

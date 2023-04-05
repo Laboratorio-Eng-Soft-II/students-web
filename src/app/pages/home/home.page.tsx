@@ -1,10 +1,6 @@
 import React from "react";
 import { CardsContainer, Container } from "./home-styles";
-import {
-  faFaceLaugh,
-  faListAlt,
-  faFileLines,
-} from "@fortawesome/free-regular-svg-icons";
+import { faFaceLaugh, faListAlt } from "@fortawesome/free-regular-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { Space, ConfigProvider } from "antd";
 import { AppPath } from "../../routes";
@@ -22,17 +18,12 @@ export const HomePage = () => {
             <CardItem
               icon={faFaceLaugh}
               title="Perfil"
-              onClick={() => navigate("")}
+              onClick={() => navigate(AppPath.profile)}
             />
             <CardItem
               icon={faListAlt}
               title="Vagas"
               onClick={() => navigate(AppPath.positions)}
-            />
-            <CardItem
-              icon={faFileLines}
-              title="Currículo"
-              onClick={() => navigate("")}
             />
           </CardsContainer>
         </Space>
