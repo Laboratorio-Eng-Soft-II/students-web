@@ -76,7 +76,7 @@ export const SignUpPage = () => {
       password,
     });
 
-    navigate(AppPath.home);
+    setShowFlash(true);
   };
   return (
     <CenterView>
@@ -84,6 +84,7 @@ export const SignUpPage = () => {
         <FlashMessage
           type="success"
           message="Aluno cadastrado com sucesso"
+          showIcon
           action={
             <Button type="link" onClick={() => navigate(AppPath.home)}>
               IR PARA HOME
