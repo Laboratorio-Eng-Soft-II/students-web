@@ -1,10 +1,11 @@
 import { Card, Space, Form, Input, Typography, Button, Select } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { CenterView } from "../../../components/center-view/center-view.styles";
 import { useNavigate } from "react-router-dom";
 import { AppPath } from "../../routes";
 import axios from "axios";
 import { STUDENTS_BASE_URL } from "../../../core";
+import { FlashMessage } from "../../../components/flash-message";
 
 const { Title, Text } = Typography;
 
@@ -46,6 +47,8 @@ const SKILLS_OPTIONS = [
 export const SignUpPage = () => {
   const [form] = Form.useForm<IForm>();
 
+  const [showFlash, setShowFlash] = useState(false);
+
   const navigate = useNavigate();
 
   const onFinish = async (values: IForm) => {
@@ -73,10 +76,23 @@ export const SignUpPage = () => {
       password,
     });
 
-    navigate(AppPath.home);
+    setShowFlash(true);
   };
   return (
     <CenterView>
+      {showFlash && (
+        <FlashMessage
+          type="success"
+          message="Aluno cadastrado com sucesso"
+          showIcon
+          action={
+            <Button type="link" onClick={() => navigate(AppPath.home)}>
+              IR PARA HOME
+            </Button>
+          }
+          afterClose={() => setShowFlash(false)}
+        />
+      )}
       <Card
         bordered={false}
         style={{ overflow: "scroll", maxHeight: "95%", width: "80%" }}

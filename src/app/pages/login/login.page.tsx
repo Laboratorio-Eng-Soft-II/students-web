@@ -26,7 +26,7 @@ export const LoginPage = () => {
         email,
         password,
       });
-      localStorage.setItem("user", JSON.stringify(result));
+      localStorage.setItem("user", JSON.stringify(result.data));
       navigate(AppPath.home);
     } catch (error) {
       console.log(error);
