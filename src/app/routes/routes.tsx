@@ -5,6 +5,7 @@ import { LoginPage } from "../pages/login";
 import { SignUpPage } from "../pages/sign-up";
 import { AppPath } from "./app-path";
 import { PositionsPage } from "../pages/positions";
+import { PositionDetailsPage } from "../pages/position-details";
 
 export const Routes = () => {
   return (
@@ -15,6 +16,7 @@ export const Routes = () => {
         <Route path={AppPath.home} element={<HomePage />} />
         <Route path={AppPath.signUp} element={<SignUpPage />} />
         <Route path={AppPath.positions} element={<PositionsPage />} />
+        <Route path={AppPath.positions + '/:id'} element={<PositionDetailsPage />} />  
       </ReactRoutes>
     </BrowserRouter>
   );

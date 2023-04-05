@@ -1,13 +1,12 @@
 import React, { Fragment, useEffect, useState } from "react";
 
-import logoPoli from "../../../assets/LogoEPUSP.png";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { POSITIONS_BASE_URL } from "../../../core";
 import { Container } from "../home/home-styles";
 import { H1, H3, LinkButton, Spacing } from "../../../theme";
 import { AppPath } from "../../routes";
-import { Hbox, Separator, TextCard } from "../../../components";
+import { Hbox, Header, Separator, TextCard } from "../../../components";
 
 export interface PositionModel {
   type: string;
@@ -33,12 +32,7 @@ export const PositionsPage: React.FC = () => {
 
   return (
     <Container>
-      <img width="100px" height="100px" src={logoPoli} alt="logo da Poli"></img>
-      <H1 textAlign="center">Internship 4.0 - Portal de estágios</H1>
-      <Separator size={Spacing.XSmall} />
-
-      <H3>Todas as vagas</H3>
-      <Separator size={Spacing.XSmall} />
+      <Header title="Todas as vagas"/>
 
       {positions?.map((position, index) => (
         <Fragment key={`${position}-${index}`}>
