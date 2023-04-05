@@ -10,6 +10,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { CardItem } from "../../../components/card-item";
 import { Typography, Space, ConfigProvider } from "antd";
+import { AppPath } from "../../routes";
 
 const { Title, Text } = Typography;
 
@@ -40,7 +41,7 @@ export const HomePage = () => {
             <CardItem
               icon={faListAlt}
               title="Vagas"
-              onClick={() => navigate("")}
+              onClick={() => navigate(AppPath.positions)}
             />
             <CardItem
               icon={faFileLines}
