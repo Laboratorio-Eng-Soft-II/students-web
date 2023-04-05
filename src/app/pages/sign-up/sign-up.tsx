@@ -4,7 +4,7 @@ import { CenterView } from "../../../components/center-view/center-view.styles";
 import { useNavigate } from "react-router-dom";
 import { AppPath } from "../../routes";
 import axios from "axios";
-import { STUDENTS_BASE_URL } from "../../../core/base-urls";
+import { STUDENTS_BASE_URL } from "../../../core";
 
 const { Title, Text } = Typography;
 
