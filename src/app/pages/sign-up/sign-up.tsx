@@ -89,6 +89,7 @@ export const SignUpPage = () => {
               IR PARA HOME
             </Button>
           }
+          afterClose={() => setShowFlash(false)}
         />
       )}
       <Card
