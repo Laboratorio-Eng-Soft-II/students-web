@@ -14,7 +14,6 @@ interface IForm {
   nusp: string;
   engineering: string;
   skills: string[];
-  other_skills: string;
   phone: string;
   address: string;
   quarter: string;
@@ -56,7 +55,6 @@ export const SignUpPage = () => {
       name,
       nusp,
       engineering,
-      other_skills,
       phone,
       quarter,
       skills,
@@ -122,6 +120,7 @@ export const SignUpPage = () => {
             <Form.Item name="engineering" label="Curso">
               <Input placeholder="Digite seu curso" />
             </Form.Item>
+
             <Form.Item name="quarter" label="Período atual">
               <Input placeholder="Período atual" />
             </Form.Item>
@@ -132,10 +131,6 @@ export const SignUpPage = () => {
                 options={SKILLS_OPTIONS}
                 placeholder="Selecione suas habilidades principais"
               />
-            </Form.Item>
-
-            <Form.Item name="other_skilss" label="Outras (opcional)">
-              <Input.TextArea placeholder="Escreva outras habilidades que não estavam na lista" />
             </Form.Item>
 
             <Form.Item
