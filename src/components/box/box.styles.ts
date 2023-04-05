@@ -13,11 +13,6 @@ export const Separator = styled.div<SeparatorProps>`
             : `margin: ${props.size ?? Spacing.Medium} 0`};
 `
 
-export const VBox = styled.div`
-    display: flex;
-    flex-direction: column;
-`
-
 interface BoxProps {
     grow?: boolean
     hAlign?:
@@ -40,6 +35,13 @@ interface BoxProps {
     minWidth?: string
     maxWidth?: string
 }
+
+export const VBox = styled.div<BoxProps>`
+    display: flex;
+    flex-direction: column;
+    justify-content: ${props => props.hAlign ?? 'stretch'};
+    align-items: ${props => props.vAlign ?? null};
+`
 
 export const HboxStyled = styled.div<BoxProps>`
     display: flex;
