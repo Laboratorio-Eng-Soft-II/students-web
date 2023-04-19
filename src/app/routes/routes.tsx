@@ -7,6 +7,7 @@ import { ProfilePage } from "../pages/profile";
 import { AppPath } from "./app-path";
 import { PositionsPage } from "../pages/positions";
 import { PositionDetailsPage } from "../pages/position-details";
+import { CompanyFeedbackPage } from "../pages/company-feedback";
 
 export const Routes = () => {
   return (
@@ -19,6 +20,7 @@ export const Routes = () => {
         <Route path={AppPath.profile} element={<ProfilePage />} />
         <Route path={AppPath.positions} element={<PositionsPage />} />
         <Route path={AppPath.positions + '/:id'} element={<PositionDetailsPage />} />  
+        <Route path={AppPath.companyFeedback} element={<CompanyFeedbackPage />} />  
       </ReactRoutes>
     </BrowserRouter>
   );

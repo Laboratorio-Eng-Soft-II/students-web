@@ -1,6 +1,6 @@
 import React from "react";
 import { CardsContainer, Container } from "./home-styles";
-import { faFaceLaugh, faListAlt } from "@fortawesome/free-regular-svg-icons";
+import { faFaceLaugh, faListAlt, faStar } from "@fortawesome/free-regular-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { Space, ConfigProvider } from "antd";
 import { AppPath } from "../../routes";
@@ -24,6 +24,11 @@ export const HomePage = () => {
               icon={faListAlt}
               title="Vagas"
               onClick={() => navigate(AppPath.positions)}
+            />
+            <CardItem
+              icon={faStar}
+              title="Avaliação da Empresa"
+              onClick={() => navigate(AppPath.companyFeedback)}
             />
           </CardsContainer>
         </Space>

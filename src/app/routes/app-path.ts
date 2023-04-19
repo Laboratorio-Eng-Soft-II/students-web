@@ -3,5 +3,6 @@ export const AppPath = {
   home: "/students/home",
   signUp: "/students/sign-up",
   profile: "/students/profile",
-  positions: "/students/positions"
+  positions: "/students/positions",
+  companyFeedback: "/students/company-feedback",
 };
