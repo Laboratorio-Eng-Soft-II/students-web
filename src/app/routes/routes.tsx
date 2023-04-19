@@ -8,6 +8,7 @@ import { AppPath } from "./app-path";
 import { PositionsPage } from "../pages/positions";
 import { PositionDetailsPage } from "../pages/position-details";
 import { CompanyFeedbackPage } from "../pages/company-feedback";
+import { EnrollmentPage } from "../pages/apply";
 
 export const Routes = () => {
   return (
@@ -19,8 +20,18 @@ export const Routes = () => {
         <Route path={AppPath.signUp} element={<SignUpPage />} />
         <Route path={AppPath.profile} element={<ProfilePage />} />
         <Route path={AppPath.positions} element={<PositionsPage />} />
-        <Route path={AppPath.positions + '/:id'} element={<PositionDetailsPage />} />  
-        <Route path={AppPath.companyFeedback} element={<CompanyFeedbackPage />} />  
+        <Route
+          path={AppPath.positions + "/:id"}
+          element={<PositionDetailsPage />}
+        />
+        <Route
+          path={AppPath.companyFeedback}
+          element={<CompanyFeedbackPage />}
+        />
+        <Route
+          path={AppPath.applyPage + "/:positionId"}
+          element={<EnrollmentPage />}
+        />
       </ReactRoutes>
     </BrowserRouter>
   );

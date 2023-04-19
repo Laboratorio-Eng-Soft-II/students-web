@@ -5,4 +5,5 @@ export const AppPath = {
   profile: "/students/profile",
   positions: "/students/positions",
   companyFeedback: "/students/company-feedback",
+  applyPage: "/students/apply",
 };
