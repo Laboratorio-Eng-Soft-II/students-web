@@ -64,19 +64,24 @@ export const SignUpPage = () => {
       password,
     } = values;
 
-    await axios.post(`${STUDENTS_BASE_URL}students`, {
-      nusp,
-      name,
-      engineering,
-      current_quarter: parseInt(quarter),
-      usp_email: email,
-      phone,
-      skills,
-      address,
-      password,
-    });
+    console.log(values);
 
-    setShowFlash(true);
+    try {
+      await axios.post(`${STUDENTS_BASE_URL}students`, {
+        nusp,
+        name,
+        engineering,
+        current_quarter: parseInt(quarter),
+        usp_email: email,
+        phone,
+        skills,
+        address,
+        password,
+      });
+      setShowFlash(true);
+    } catch (e) {
+      console.log(e);
+    }
   };
   return (
     <CenterView>
@@ -131,7 +136,7 @@ export const SignUpPage = () => {
               ]}
             >
               <Input placeholder="Seu número USP" />
-            </Form.Item>  
+            </Form.Item>
 
             <Form.Item name="engineering" label="Curso">
               <Input placeholder="Digite seu curso" />
