@@ -61,7 +61,7 @@ export const CompanyFeedbackPage: React.FC = () => {
         new Array(questions.length).fill(1),
     )
 
-    const [students, setStudents] = useState<CompanyOption[]>()
+    const [companies, setCompanies] = useState<CompanyOption[]>()
     const [selectedCompany, setSelectedCompany] = useState<string>()
 
     useEffect(() => {
@@ -71,7 +71,7 @@ export const CompanyFeedbackPage: React.FC = () => {
                 response.push({ name: option.corporateName, cnpj: option.cnpj })
                 return '' // Evitando erro de map sem return
             })
-            setStudents(response)
+            setCompanies(response)
         })
     }, [])
 
@@ -115,7 +115,7 @@ export const CompanyFeedbackPage: React.FC = () => {
                     <Col>
                         <SelectField
                             label="Nome da empresa"
-                            options={students?.map(value => {
+                            options={companies?.map(value => {
                                 return { value: value.cnpj, label: value.name }
                             })}
                             onChange={(value: string) =>
