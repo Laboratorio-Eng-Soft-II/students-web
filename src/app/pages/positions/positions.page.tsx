@@ -17,6 +17,7 @@ export interface PositionModel {
   id: string;
   cnpj: string;
   benefits: string;
+  approved: string;
 }
 
 export const PositionsPage: React.FC = () => {
@@ -27,7 +28,7 @@ export const PositionsPage: React.FC = () => {
   useEffect(() => {
     axios
       .get(`${POSITIONS_BASE_URL}positions`)
-      .then((response) => setPositions(response.data));
+      .then((response) => setPositions(response.data.filter((position: PositionModel) => position.approved === 'approved')));
   }, []);
 
   return (
