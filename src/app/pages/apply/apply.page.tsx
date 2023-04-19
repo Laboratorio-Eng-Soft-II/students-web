@@ -32,7 +32,7 @@ export const EnrollmentPage: React.FC = () => {
 
     try {
       axios
-        .post(`${STUDENTS_BASE_URL}enrollment/${positionId}`, {
+        .post(`${STUDENTS_BASE_URL}students/enrollment/${positionId}`, {
           cv_link,
           linkedin_link,
           student_nusp: user.nusp_cnpj,
